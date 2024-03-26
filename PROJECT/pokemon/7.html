@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Details</title>
+    <style>
+        .jb-yellow {
+            color: rgb(247, 196, 55);
+            text-decoration: none;
+            padding-left: 10px;
+            padding-top: 20px; /* 위쪽 패딩 값 변경 */
+            margin-top: 10%; /* "Pokemon List" 링크의 상단 간격 조절 */
+            
+        }
+
+        hr {
+            border: 0; /* 기본 테두리 제거 */
+            height: 2px; /* 높이 설정 */
+            background-color: rgb(247, 196, 55); /* 배경색 설정 */
+            margin: 30px 0; /* 위아래 여백 설정 */
+
+        }
+
+
+        
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .pokemon-image {
+            border: 5px solid rgb(247, 196, 55);
+            border-radius: 50%;
+            max-width: 300px;
+            height: 300px; /* 이미지의 높이 지정 */
+            background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"); /* 이미지 링크 추가 */
+            background-size: cover; /* 이미지가 요소에 맞게 확장되도록 설정 */
+            background-position: center; /* 이미지를 가운데 정렬 */
+            display: block;
+            margin: 0 auto 30px;
+        }
+        
+        
+        .pokemon-details {
+            width: 900px; /* 박스의 너비 조절 */
+            margin: 0 auto;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* 박스의 배경색 조절 */
+            border: 2px solid rgb(247, 196, 55); /* 박스의 테두리 두께와 색상 조절 */
+            border-radius: 10px; /* 박스의 모서리 둥글게 조절 */
+        }
+        .pokemon-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .attribute-container {
+            text-align: left;
+            margin-bottom: 20px;
+            border: 1px solid rgb(247, 196, 55); /* 박스 테두리 설정 */
+            border-radius: 10px; /* 박스 모서리 둥글게 설정 */
+            padding: 10px; /* 내용 주변 여백 설정 */
+            display: inline-block; /* 요소를 인라인 블록 요소로 설정하여 가로 정렬 */
+            width: 300px; /* 박스의 너비 조절 */
+            height: auto; /* 높이 자동으로 조절되도록 설정 */
+        }
+
+        .attribute-item {
+            display: flex; /* 속성과 속성 값을 가로 정렬하기 위해 flex로 설정 */
+            justify-content: 50px; /* 속성과 속성 값 간의 간격을 최대로 설정 */
+            margin-bottom: 5px; /* 각 속성과 속성 값 사이의 간격 설정 */
+        }
+
+        .attribute-item:not(:last-child) {
+            border-bottom: 1px solid rgb(247, 196, 55); /* 선의 스타일 및 색상 지정 */
+            padding-bottom: 5px; /* 각 선 아래에 약간의 여백 추가 */
+        }
+        
+        .attribute-name {
+            flex: 1; /* 속성 이름이 왼쪽으로 정렬되도록 설정 */
+            margin-right: 10px; /* 왼쪽 정렬된 요소의 오른쪽 여백 설정 */
+
+        }
+
+        .attribute-value {
+            flex: 1; /* 속성 값이 오른쪽으로 정렬되도록 설정 */
+            text-align: right; /* 속성 값이 오른쪽으로 정렬되도록 설정 */
+            margin-left: 10px; /* 오른쪽 정렬된 요소의 왼쪽 여백 설정 */
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <nav> 
+        <h1>
+            <a href="./" class="jb-yellow">Pokemon List</a>
+        </h1>
+    </nav>
+    <hr>
+
+
+    <div class="container">
+        <img src="pokemon_image.jpg" class="pokemon-image">
+        <div class="pokemon-name">Squirtle</div>
+        
+        <div class="attribute-container">
+            <div class="attribute-item">
+                <div class="attribute-name">Height:</div>
+                <div class="attribute-value">7 dm</div>
+            </div>
+            
+            <div class="attribute-item">
+                <div class="attribute-name">Weight:</div>
+                <div class="attribute-value">69 hg</div>
+            </div>
+
+            <div class="attribute-item">
+                <div class="attribute-name">Types:</div>
+                <div class="attribute-value">Grass, Poison</div>
+            </div>
+            
+            <div class="attribute-item">
+                <div class="attribute-name">Base Experience:</div>
+                <div class="attribute-value">64</div>
+            </div>
+            
+            <div class="attribute-item">
+                <div class="attribute-name">Abilities:</div>
+                <div class="attribute-value">Overgrow, Chlorophyll</div>
+            </div>
+            
+            <div class="attribute-item">
+                <div class="attribute-name">HP:</div>
+                <div class="attribute-value">45</div>
+            </div>
+            
+            <div class="attribute-item">
+                <div class="attribute-name">Attack:</div>
+                <div class="attribute-value">49</div>
+            </div>
+            
+            <div class="attribute-item">
+                <div class="attribute-name">Defense:</div>
+                <div class="attribute-value">49</div>
+            </div>
+            
+            <div class="attribute-item">
+                <div class="attribute-name">Special Attack:</div>
+                <div class="attribute-value">65</div>
+            </div>
+            
+            <div class="attribute-item">
+                <div class="attribute-name">Special Defense:</div>
+                <div class="attribute-value">65</div>
+            </div>
+            
+            <div class="attribute-item">
+                <div class="attribute-name">Speed:</div>
+                <div class="attribute-value">45</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
